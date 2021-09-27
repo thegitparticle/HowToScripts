@@ -13,7 +13,7 @@ struct How_to_ScriptsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            IndexScreen()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
