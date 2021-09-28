@@ -22,7 +22,6 @@
 		26D10F252703267E00A16295 /* CraftNameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F242703267E00A16295 /* CraftNameItem.swift */; };
 		26D10F27270333BC00A16295 /* GetCallsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F26270333BC00A16295 /* GetCallsViewModel.swift */; };
 		26D10F2A2703342E00A16295 /* GetCallsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F292703342E00A16295 /* GetCallsData.swift */; };
-		26D10F2C2703343800A16295 /* GetCallsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F2B2703343800A16295 /* GetCallsApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +63,6 @@
 		26D10F242703267E00A16295 /* CraftNameItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraftNameItem.swift; sourceTree = "<group>"; };
 		26D10F26270333BC00A16295 /* GetCallsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallsViewModel.swift; sourceTree = "<group>"; };
 		26D10F292703342E00A16295 /* GetCallsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallsData.swift; sourceTree = "<group>"; };
-		26D10F2B2703343800A16295 /* GetCallsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallsApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,7 +173,7 @@
 		26D10F1A27025C4A00A16295 /* getcalls */ = {
 			isa = PBXGroup;
 			children = (
-				26D10F282703341800A16295 /* network */,
+				26D10F292703342E00A16295 /* GetCallsData.swift */,
 				26D10F232703252700A16295 /* components */,
 				26D10F1F27026F6400A16295 /* GetCallsScreen.swift */,
 				26D10F26270333BC00A16295 /* GetCallsViewModel.swift */,
@@ -189,15 +187,6 @@
 				26D10F242703267E00A16295 /* CraftNameItem.swift */,
 			);
 			path = components;
-			sourceTree = "<group>";
-		};
-		26D10F282703341800A16295 /* network */ = {
-			isa = PBXGroup;
-			children = (
-				26D10F292703342E00A16295 /* GetCallsData.swift */,
-				26D10F2B2703343800A16295 /* GetCallsApi.swift */,
-			);
-			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,7 +319,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D10F1E27025CF100A16295 /* IndexScreen.swift in Sources */,
-				26D10F2C2703343800A16295 /* GetCallsApi.swift in Sources */,
 				26D10EF227025BCD00A16295 /* Persistence.swift in Sources */,
 				26D10F1C27025C6100A16295 /* IndexData.swift in Sources */,
 				26D10F27270333BC00A16295 /* GetCallsViewModel.swift in Sources */,
