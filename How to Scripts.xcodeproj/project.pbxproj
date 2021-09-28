@@ -22,6 +22,9 @@
 		26D10F252703267E00A16295 /* CraftNameItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F242703267E00A16295 /* CraftNameItem.swift */; };
 		26D10F27270333BC00A16295 /* GetCallsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F26270333BC00A16295 /* GetCallsViewModel.swift */; };
 		26D10F2A2703342E00A16295 /* GetCallsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F292703342E00A16295 /* GetCallsData.swift */; };
+		26D10F312703B6CD00A16295 /* LoginFlowMainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F302703B6CD00A16295 /* LoginFlowMainScreen.swift */; };
+		26D10F342703B6E000A16295 /* WelcomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F332703B6E000A16295 /* WelcomeScreen.swift */; };
+		26D10F362703B6E800A16295 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10F352703B6E800A16295 /* HomeScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		26D10F242703267E00A16295 /* CraftNameItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CraftNameItem.swift; sourceTree = "<group>"; };
 		26D10F26270333BC00A16295 /* GetCallsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallsViewModel.swift; sourceTree = "<group>"; };
 		26D10F292703342E00A16295 /* GetCallsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCallsData.swift; sourceTree = "<group>"; };
+		26D10F302703B6CD00A16295 /* LoginFlowMainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFlowMainScreen.swift; sourceTree = "<group>"; };
+		26D10F332703B6E000A16295 /* WelcomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeScreen.swift; sourceTree = "<group>"; };
+		26D10F352703B6E800A16295 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +160,7 @@
 		26D10F1827025C3700A16295 /* buckets */ = {
 			isa = PBXGroup;
 			children = (
+				26D10F2F2703B6B000A16295 /* loginflow */,
 				26D10F1A27025C4A00A16295 /* getcalls */,
 				26D10F1927025C3F00A16295 /* index */,
 			);
@@ -185,6 +192,24 @@
 			isa = PBXGroup;
 			children = (
 				26D10F242703267E00A16295 /* CraftNameItem.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		26D10F2F2703B6B000A16295 /* loginflow */ = {
+			isa = PBXGroup;
+			children = (
+				26D10F322703B6D300A16295 /* components */,
+				26D10F302703B6CD00A16295 /* LoginFlowMainScreen.swift */,
+			);
+			path = loginflow;
+			sourceTree = "<group>";
+		};
+		26D10F322703B6D300A16295 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				26D10F332703B6E000A16295 /* WelcomeScreen.swift */,
+				26D10F352703B6E800A16295 /* HomeScreen.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -320,8 +345,11 @@
 			files = (
 				26D10F1E27025CF100A16295 /* IndexScreen.swift in Sources */,
 				26D10EF227025BCD00A16295 /* Persistence.swift in Sources */,
+				26D10F362703B6E800A16295 /* HomeScreen.swift in Sources */,
+				26D10F312703B6CD00A16295 /* LoginFlowMainScreen.swift in Sources */,
 				26D10F1C27025C6100A16295 /* IndexData.swift in Sources */,
 				26D10F27270333BC00A16295 /* GetCallsViewModel.swift in Sources */,
+				26D10F342703B6E000A16295 /* WelcomeScreen.swift in Sources */,
 				26D10F2A2703342E00A16295 /* GetCallsData.swift in Sources */,
 				26D10EEB27025BCB00A16295 /* ContentView.swift in Sources */,
 				26D10F222702FE4000A16295 /* ScriptPlayScreen.swift in Sources */,

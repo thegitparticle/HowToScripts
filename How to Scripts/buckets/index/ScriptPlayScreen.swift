@@ -11,15 +11,12 @@ struct ScriptPlayScreen: View {
 	let screen: String?
 	
     var body: some View {
-        Text("scripts are played here")
 		if (screen == "GETCallsScreen") {
 			GetCallsScreen()
+		} else if (screen == "LoginNavScreen") {
+			LoginFlowMainScreen()
 		}
     }
-	
-	func printSomething () {
-		print("something printed by the screen")
-	}
 }
 
 struct ScriptPlayScreen_Previews: PreviewProvider {
