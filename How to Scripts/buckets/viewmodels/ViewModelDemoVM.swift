@@ -11,43 +11,24 @@ import SwiftUI
 
 class ViewModelDemoVM: ObservableObject {
 	
-	@Environment(\.managedObjectContext) var managedObjectContext
+	@Published var spacecraftsList = [SpaceCraft]()
 	
-	@FetchRequest(
-		// 2.
-		entity: Craft.entity(),
-		// 3.
-		sortDescriptors: [
-			NSSortDescriptor(keyPath: \Craft.id, ascending: true)
-		]
-		//,predicate: NSPredicate(format: "genre contains 'Action'")
-		// 4.
-	) var spaceCraftsHere: FetchedResults<Craft>
-
+	private var cancellable: AnyCancellable?
 	
-	@Published var spaceCraftsLocal = [GetCallsData]()
-	
-	init () {
+	init(spacecraftPublisher: AnyPublisher<[SpaceCraft], Never> = SpaceCraftStore.shared.spacecrafts.eraseToAnyPublisher()) {
+		cancellable = spacecraftPublisher.sink { [unowned self] spacecrafts in
+			self.spacecraftsList = spacecrafts
+//			print(spacecrafts)
+		}
 		getDetailsFromApi()
 	}
 	
-	func addCraft(id: String) {
-		// 1
-		let newCraft = Craft(context: managedObjectContext)
-		
-		// 2
-		newCraft.id = id
-		
-		// 3
-		saveContext()
+	func addSpaceCraft(id: String? = "") {
+		SpaceCraftStore.shared.add(id: id!)
 	}
 	
-	func saveContext() {
-		do {
-			try managedObjectContext.save()
-		} catch {
-			print("Error saving managed object context: \(error)")
-		}
+	func deleteCourse(id: String) {
+		SpaceCraftStore.shared.delete(id: id)
 	}
 	
 	private func getDetailsFromApi() {
@@ -64,12 +45,11 @@ class ViewModelDemoVM: ObservableObject {
 				if let decodedResponse = try? JSONDecoder().decode(GetCallsResponse.self, from: data) {
 					
 					DispatchQueue.main.async {
-						self.spaceCraftsLocal = decodedResponse.spacecrafts
-						for item in self.spaceCraftsLocal {
-							self.addCraft(id: item.id!)
+//						self.spaceCraftsHere = decodedResponse.spacecrafts
+						for item in decodedResponse.spacecrafts {
+							self.addSpaceCraft(id: item.id)
 						}
 					}
-					print(decodedResponse.spacecrafts)
 					return
 				}
 				

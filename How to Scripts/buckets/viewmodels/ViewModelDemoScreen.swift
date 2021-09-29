@@ -12,16 +12,18 @@ struct ViewModelDemoScreen: View {
 	
 	var body: some View {
 		
-		List(viewModel.spaceCraftsHere, id: \.id) { item in
+//		List(viewModel.$spacecrafts)
+		
+		List(viewModel.spacecraftsList, id: \.id) { item in
 			
 			VStack(alignment: .leading) {
-				Text(item.id ?? "loading ...")
+				Text(item.id ?? "loading ..." )
 					.font(.headline)
 			}
 			
 		}
 		
-		if (viewModel.spaceCraftsHere.count > 0) {
+		if (viewModel.spacecraftsList.count > 0) {
 			Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
 		} else {
 			Text("still loading, bruh!")
