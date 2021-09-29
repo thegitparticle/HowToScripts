@@ -7,12 +7,47 @@
 
 import Foundation
 import Combine
+import SwiftUI
 
 class ViewModelDemoVM: ObservableObject {
-	@Published var spaceCraftsHere = [GetCallsData]()
+	
+	@Environment(\.managedObjectContext) var managedObjectContext
+	
+	@FetchRequest(
+		// 2.
+		entity: Craft.entity(),
+		// 3.
+		sortDescriptors: [
+			NSSortDescriptor(keyPath: \Craft.id, ascending: true)
+		]
+		//,predicate: NSPredicate(format: "genre contains 'Action'")
+		// 4.
+	) var spaceCraftsHere: FetchedResults<Craft>
+
+	
+	@Published var spaceCraftsLocal = [GetCallsData]()
 	
 	init () {
 		getDetailsFromApi()
+	}
+	
+	func addCraft(id: String) {
+		// 1
+		let newCraft = Craft(context: managedObjectContext)
+		
+		// 2
+		newCraft.id = id
+		
+		// 3
+		saveContext()
+	}
+	
+	func saveContext() {
+		do {
+			try managedObjectContext.save()
+		} catch {
+			print("Error saving managed object context: \(error)")
+		}
 	}
 	
 	private func getDetailsFromApi() {
@@ -29,7 +64,10 @@ class ViewModelDemoVM: ObservableObject {
 				if let decodedResponse = try? JSONDecoder().decode(GetCallsResponse.self, from: data) {
 					
 					DispatchQueue.main.async {
-						self.spaceCraftsHere = decodedResponse.spacecrafts
+						self.spaceCraftsLocal = decodedResponse.spacecrafts
+						for item in self.spaceCraftsLocal {
+							self.addCraft(id: item.id!)
+						}
 					}
 					print(decodedResponse.spacecrafts)
 					return

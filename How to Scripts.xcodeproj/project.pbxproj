@@ -11,8 +11,9 @@
 		264AB2092704587600E394E6 /* ViewModelDemoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB2082704587600E394E6 /* ViewModelDemoVM.swift */; };
 		264AB20E270462BC00E394E6 /* ImageCacheScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB20D270462BC00E394E6 /* ImageCacheScreen.swift */; };
 		264AB211270465E000E394E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 264AB210270465E000E394E6 /* Kingfisher */; };
+		264AB21627046F7100E394E6 /* SpaceCrafts.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 264AB21427046F7100E394E6 /* SpaceCrafts.xcdatamodeld */; };
+		264AB2182704956E00E394E6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB2172704956E00E394E6 /* SceneDelegate.swift */; };
 		26D10EE927025BCB00A16295 /* How_to_ScriptsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */; };
-		26D10EEB27025BCB00A16295 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10EEA27025BCB00A16295 /* ContentView.swift */; };
 		26D10EED27025BCD00A16295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D10EEC27025BCD00A16295 /* Assets.xcassets */; };
 		26D10EF027025BCD00A16295 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D10EEF27025BCD00A16295 /* Preview Assets.xcassets */; };
 		26D10EF227025BCD00A16295 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10EF127025BCD00A16295 /* Persistence.swift */; };
@@ -52,9 +53,10 @@
 		264AB2062704586B00E394E6 /* ViewModelDemoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDemoScreen.swift; sourceTree = "<group>"; };
 		264AB2082704587600E394E6 /* ViewModelDemoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDemoVM.swift; sourceTree = "<group>"; };
 		264AB20D270462BC00E394E6 /* ImageCacheScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheScreen.swift; sourceTree = "<group>"; };
+		264AB21527046F7100E394E6 /* SpaceCrafts.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SpaceCrafts.xcdatamodel; sourceTree = "<group>"; };
+		264AB2172704956E00E394E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		26D10EE527025BCB00A16295 /* How to Scripts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How to Scripts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How_to_ScriptsApp.swift; sourceTree = "<group>"; };
-		26D10EEA27025BCB00A16295 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		26D10EEC27025BCD00A16295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		26D10EEF27025BCD00A16295 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		26D10EF127025BCD00A16295 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -121,6 +123,14 @@
 			path = imageview;
 			sourceTree = "<group>";
 		};
+		264AB21327046F5600E394E6 /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				264AB21427046F7100E394E6 /* SpaceCrafts.xcdatamodeld */,
+			);
+			path = coredata;
+			sourceTree = "<group>";
+		};
 		26D10EDC27025BCB00A16295 = {
 			isa = PBXGroup;
 			children = (
@@ -144,14 +154,15 @@
 		26D10EE727025BCB00A16295 /* How to Scripts */ = {
 			isa = PBXGroup;
 			children = (
+				264AB21327046F5600E394E6 /* coredata */,
 				26D10F1827025C3700A16295 /* buckets */,
 				26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */,
-				26D10EEA27025BCB00A16295 /* ContentView.swift */,
 				26D10EEC27025BCD00A16295 /* Assets.xcassets */,
 				26D10EF127025BCD00A16295 /* Persistence.swift */,
 				26D10EF627025BCD00A16295 /* Info.plist */,
 				26D10EF327025BCD00A16295 /* How_to_Scripts.xcdatamodeld */,
 				26D10EEE27025BCD00A16295 /* Preview Content */,
+				264AB2172704956E00E394E6 /* SceneDelegate.swift */,
 			);
 			path = "How to Scripts";
 			sourceTree = "<group>";
@@ -377,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26D10F1E27025CF100A16295 /* IndexScreen.swift in Sources */,
+				264AB21627046F7100E394E6 /* SpaceCrafts.xcdatamodeld in Sources */,
 				26D10EF227025BCD00A16295 /* Persistence.swift in Sources */,
 				26D10F362703B6E800A16295 /* HomeScreen.swift in Sources */,
 				26D10F312703B6CD00A16295 /* LoginFlowMainScreen.swift in Sources */,
@@ -386,11 +398,11 @@
 				26D10F342703B6E000A16295 /* WelcomeScreen.swift in Sources */,
 				264AB20E270462BC00E394E6 /* ImageCacheScreen.swift in Sources */,
 				26D10F2A2703342E00A16295 /* GetCallsData.swift in Sources */,
-				26D10EEB27025BCB00A16295 /* ContentView.swift in Sources */,
 				26D10F222702FE4000A16295 /* ScriptPlayScreen.swift in Sources */,
 				26D10EF527025BCD00A16295 /* How_to_Scripts.xcdatamodeld in Sources */,
 				26D10F2027026F6400A16295 /* GetCallsScreen.swift in Sources */,
 				264AB2072704586B00E394E6 /* ViewModelDemoScreen.swift in Sources */,
+				264AB2182704956E00E394E6 /* SceneDelegate.swift in Sources */,
 				26D10F252703267E00A16295 /* CraftNameItem.swift in Sources */,
 				26D10EE927025BCB00A16295 /* How_to_ScriptsApp.swift in Sources */,
 			);
@@ -733,6 +745,16 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
+		264AB21427046F7100E394E6 /* SpaceCrafts.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				264AB21527046F7100E394E6 /* SpaceCrafts.xcdatamodel */,
+			);
+			currentVersion = 264AB21527046F7100E394E6 /* SpaceCrafts.xcdatamodel */;
+			path = SpaceCrafts.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 		26D10EF327025BCD00A16295 /* How_to_Scripts.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
