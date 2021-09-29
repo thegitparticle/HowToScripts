@@ -17,6 +17,8 @@ struct ScriptPlayScreen: View {
 			LoginFlowMainScreen()
 		} else if (screen == "ViewModelDemoScreen") {
 			ViewModelDemoScreen()
+		} else if (screen == "ImageCacheScreen") {
+			ImageCacheScreen()
 		}
     }
 }

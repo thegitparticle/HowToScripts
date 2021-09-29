@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		264AB2072704586B00E394E6 /* ViewModelDemoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB2062704586B00E394E6 /* ViewModelDemoScreen.swift */; };
 		264AB2092704587600E394E6 /* ViewModelDemoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB2082704587600E394E6 /* ViewModelDemoVM.swift */; };
+		264AB20E270462BC00E394E6 /* ImageCacheScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB20D270462BC00E394E6 /* ImageCacheScreen.swift */; };
+		264AB211270465E000E394E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 264AB210270465E000E394E6 /* Kingfisher */; };
 		26D10EE927025BCB00A16295 /* How_to_ScriptsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */; };
 		26D10EEB27025BCB00A16295 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10EEA27025BCB00A16295 /* ContentView.swift */; };
 		26D10EED27025BCD00A16295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D10EEC27025BCD00A16295 /* Assets.xcassets */; };
@@ -49,6 +51,7 @@
 /* Begin PBXFileReference section */
 		264AB2062704586B00E394E6 /* ViewModelDemoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDemoScreen.swift; sourceTree = "<group>"; };
 		264AB2082704587600E394E6 /* ViewModelDemoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDemoVM.swift; sourceTree = "<group>"; };
+		264AB20D270462BC00E394E6 /* ImageCacheScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheScreen.swift; sourceTree = "<group>"; };
 		26D10EE527025BCB00A16295 /* How to Scripts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How to Scripts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How_to_ScriptsApp.swift; sourceTree = "<group>"; };
 		26D10EEA27025BCB00A16295 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -80,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				264AB211270465E000E394E6 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,6 +111,14 @@
 				264AB2082704587600E394E6 /* ViewModelDemoVM.swift */,
 			);
 			path = viewmodels;
+			sourceTree = "<group>";
+		};
+		264AB20C270462A800E394E6 /* imageview */ = {
+			isa = PBXGroup;
+			children = (
+				264AB20D270462BC00E394E6 /* ImageCacheScreen.swift */,
+			);
+			path = imageview;
 			sourceTree = "<group>";
 		};
 		26D10EDC27025BCB00A16295 = {
@@ -173,6 +185,7 @@
 		26D10F1827025C3700A16295 /* buckets */ = {
 			isa = PBXGroup;
 			children = (
+				264AB20C270462A800E394E6 /* imageview */,
 				264AB2052704565C00E394E6 /* viewmodels */,
 				26D10F2F2703B6B000A16295 /* loginflow */,
 				26D10F1A27025C4A00A16295 /* getcalls */,
@@ -244,6 +257,9 @@
 			dependencies = (
 			);
 			name = "How to Scripts";
+			packageProductDependencies = (
+				264AB210270465E000E394E6 /* Kingfisher */,
+			);
 			productName = "How to Scripts";
 			productReference = 26D10EE527025BCB00A16295 /* How to Scripts.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +331,9 @@
 				Base,
 			);
 			mainGroup = 26D10EDC27025BCB00A16295;
+			packageReferences = (
+				264AB20F270465E000E394E6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 26D10EE627025BCB00A16295 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -365,6 +384,7 @@
 				26D10F1C27025C6100A16295 /* IndexData.swift in Sources */,
 				26D10F27270333BC00A16295 /* GetCallsViewModel.swift in Sources */,
 				26D10F342703B6E000A16295 /* WelcomeScreen.swift in Sources */,
+				264AB20E270462BC00E394E6 /* ImageCacheScreen.swift in Sources */,
 				26D10F2A2703342E00A16295 /* GetCallsData.swift in Sources */,
 				26D10EEB27025BCB00A16295 /* ContentView.swift in Sources */,
 				26D10F222702FE4000A16295 /* ScriptPlayScreen.swift in Sources */,
@@ -692,6 +712,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		264AB20F270465E000E394E6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		264AB210270465E000E394E6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 264AB20F270465E000E394E6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		26D10EF327025BCD00A16295 /* How_to_Scripts.xcdatamodeld */ = {
