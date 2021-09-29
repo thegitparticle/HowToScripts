@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		264AB2072704586B00E394E6 /* ViewModelDemoScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB2062704586B00E394E6 /* ViewModelDemoScreen.swift */; };
+		264AB2092704587600E394E6 /* ViewModelDemoVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB2082704587600E394E6 /* ViewModelDemoVM.swift */; };
 		26D10EE927025BCB00A16295 /* How_to_ScriptsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */; };
 		26D10EEB27025BCB00A16295 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10EEA27025BCB00A16295 /* ContentView.swift */; };
 		26D10EED27025BCD00A16295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D10EEC27025BCD00A16295 /* Assets.xcassets */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		264AB2062704586B00E394E6 /* ViewModelDemoScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDemoScreen.swift; sourceTree = "<group>"; };
+		264AB2082704587600E394E6 /* ViewModelDemoVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDemoVM.swift; sourceTree = "<group>"; };
 		26D10EE527025BCB00A16295 /* How to Scripts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How to Scripts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How_to_ScriptsApp.swift; sourceTree = "<group>"; };
 		26D10EEA27025BCB00A16295 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		264AB2052704565C00E394E6 /* viewmodels */ = {
+			isa = PBXGroup;
+			children = (
+				264AB2062704586B00E394E6 /* ViewModelDemoScreen.swift */,
+				264AB2082704587600E394E6 /* ViewModelDemoVM.swift */,
+			);
+			path = viewmodels;
+			sourceTree = "<group>";
+		};
 		26D10EDC27025BCB00A16295 = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +173,7 @@
 		26D10F1827025C3700A16295 /* buckets */ = {
 			isa = PBXGroup;
 			children = (
+				264AB2052704565C00E394E6 /* viewmodels */,
 				26D10F2F2703B6B000A16295 /* loginflow */,
 				26D10F1A27025C4A00A16295 /* getcalls */,
 				26D10F1927025C3F00A16295 /* index */,
@@ -347,6 +361,7 @@
 				26D10EF227025BCD00A16295 /* Persistence.swift in Sources */,
 				26D10F362703B6E800A16295 /* HomeScreen.swift in Sources */,
 				26D10F312703B6CD00A16295 /* LoginFlowMainScreen.swift in Sources */,
+				264AB2092704587600E394E6 /* ViewModelDemoVM.swift in Sources */,
 				26D10F1C27025C6100A16295 /* IndexData.swift in Sources */,
 				26D10F27270333BC00A16295 /* GetCallsViewModel.swift in Sources */,
 				26D10F342703B6E000A16295 /* WelcomeScreen.swift in Sources */,
@@ -355,6 +370,7 @@
 				26D10F222702FE4000A16295 /* ScriptPlayScreen.swift in Sources */,
 				26D10EF527025BCD00A16295 /* How_to_Scripts.xcdatamodeld in Sources */,
 				26D10F2027026F6400A16295 /* GetCallsScreen.swift in Sources */,
+				264AB2072704586B00E394E6 /* ViewModelDemoScreen.swift in Sources */,
 				26D10F252703267E00A16295 /* CraftNameItem.swift in Sources */,
 				26D10EE927025BCB00A16295 /* How_to_ScriptsApp.swift in Sources */,
 			);

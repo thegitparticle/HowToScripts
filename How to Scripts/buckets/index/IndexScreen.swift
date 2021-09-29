@@ -8,14 +8,13 @@
 import SwiftUI
 
 struct IndexScreen: View {
-
 	var body: some View {
 		NavigationView {
-			VStack() {
+			VStack {
 				Text("How to? Scripts").font(.largeTitle)
 				Spacer()
-				LazyVStack() {
-					ForEach(indexList,id: \.self) { item in
+				LazyVStack {
+					ForEach(indexList, id: \.self) { item in
 						indexItemComponent(itemHere: item)
 					}
 				}
@@ -26,16 +25,14 @@ struct IndexScreen: View {
 
 struct indexItemComponent: View {
 	var itemHere: indexItem
-	
+
 	var body: some View {
-		
 		NavigationLink(destination: ScriptPlayScreen(screen: itemHere.screenName)) {
-			VStack() {
+			VStack {
 				Text("Row \(itemHere.name)").bold().foregroundColor(.white)
 			}.foregroundColor(.clear).padding().frame(maxWidth: .infinity).background(Color.blue.opacity(0.5)).cornerRadius(15)
 		}
 	}
-	
 }
 
 struct IndexScreen_Previews: PreviewProvider {

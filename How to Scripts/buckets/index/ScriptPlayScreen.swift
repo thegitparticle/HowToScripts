@@ -15,6 +15,8 @@ struct ScriptPlayScreen: View {
 			GetCallsScreen()
 		} else if (screen == "LoginNavScreen") {
 			LoginFlowMainScreen()
+		} else if (screen == "ViewModelDemoScreen") {
+			ViewModelDemoScreen()
 		}
     }
 }
