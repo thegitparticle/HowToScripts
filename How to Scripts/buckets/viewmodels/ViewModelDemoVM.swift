@@ -18,17 +18,16 @@ class ViewModelDemoVM: ObservableObject {
 	init(spacecraftPublisher: AnyPublisher<[SpaceCraft], Never> = SpaceCraftStore.shared.spacecrafts.eraseToAnyPublisher()) {
 		cancellable = spacecraftPublisher.sink { [unowned self] spacecrafts in
 			self.spacecraftsList = spacecrafts
-//			print(spacecrafts)
 		}
 		getDetailsFromApi()
 	}
 	
-	func addSpaceCraft(id: String? = "") {
-		SpaceCraftStore.shared.add(id: id!)
+	func addSpaceCraft(craft: GetCallsData) {
+		SpaceCraftStore.shared.add(id: craft.id ?? 0, name: craft.name ?? "")
 	}
 	
-	func deleteCourse(id: String) {
-		SpaceCraftStore.shared.delete(id: id)
+	func deleteCourse(craft: GetCallsData) {
+		SpaceCraftStore.shared.delete(id: craft.id ?? 0, name: craft.name ?? "")
 	}
 	
 	private func getDetailsFromApi() {
@@ -45,9 +44,8 @@ class ViewModelDemoVM: ObservableObject {
 				if let decodedResponse = try? JSONDecoder().decode(GetCallsResponse.self, from: data) {
 					
 					DispatchQueue.main.async {
-//						self.spaceCraftsHere = decodedResponse.spacecrafts
 						for item in decodedResponse.spacecrafts {
-							self.addSpaceCraft(id: item.id)
+							self.addSpaceCraft(craft: item)
 						}
 					}
 					return

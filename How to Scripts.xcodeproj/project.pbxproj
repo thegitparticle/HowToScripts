@@ -13,6 +13,7 @@
 		264AB211270465E000E394E6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 264AB210270465E000E394E6 /* Kingfisher */; };
 		264AB21B2704AB3400E394E6 /* MainDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 264AB2192704AB3400E394E6 /* MainDB.xcdatamodeld */; };
 		264AB21E2704AB6A00E394E6 /* SpaceCraftStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB21D2704AB6A00E394E6 /* SpaceCraftStore.swift */; };
+		264AB2662704FE2000E394E6 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 264AB2652704FE2000E394E6 /* SplashScreen.swift */; };
 		26D10EE927025BCB00A16295 /* How_to_ScriptsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */; };
 		26D10EED27025BCD00A16295 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D10EEC27025BCD00A16295 /* Assets.xcassets */; };
 		26D10EF027025BCD00A16295 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 26D10EEF27025BCD00A16295 /* Preview Assets.xcassets */; };
@@ -55,6 +56,7 @@
 		264AB20D270462BC00E394E6 /* ImageCacheScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheScreen.swift; sourceTree = "<group>"; };
 		264AB21A2704AB3400E394E6 /* MainDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainDB.xcdatamodel; sourceTree = "<group>"; };
 		264AB21D2704AB6A00E394E6 /* SpaceCraftStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceCraftStore.swift; sourceTree = "<group>"; };
+		264AB2652704FE2000E394E6 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		26D10EE527025BCB00A16295 /* How to Scripts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "How to Scripts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		26D10EE827025BCB00A16295 /* How_to_ScriptsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = How_to_ScriptsApp.swift; sourceTree = "<group>"; };
 		26D10EEC27025BCD00A16295 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,6 +141,14 @@
 			path = datacontrollers;
 			sourceTree = "<group>";
 		};
+		264AB2642704FE1600E394E6 /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				264AB2652704FE2000E394E6 /* SplashScreen.swift */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
 		26D10EDC27025BCB00A16295 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		26D10F1827025C3700A16295 /* buckets */ = {
 			isa = PBXGroup;
 			children = (
+				264AB2642704FE1600E394E6 /* splash */,
 				264AB20C270462A800E394E6 /* imageview */,
 				264AB2052704565C00E394E6 /* viewmodels */,
 				26D10F2F2703B6B000A16295 /* loginflow */,
@@ -410,6 +421,7 @@
 				26D10F222702FE4000A16295 /* ScriptPlayScreen.swift in Sources */,
 				26D10EF527025BCD00A16295 /* How_to_Scripts.xcdatamodeld in Sources */,
 				26D10F2027026F6400A16295 /* GetCallsScreen.swift in Sources */,
+				264AB2662704FE2000E394E6 /* SplashScreen.swift in Sources */,
 				264AB2072704586B00E394E6 /* ViewModelDemoScreen.swift in Sources */,
 				26D10F252703267E00A16295 /* CraftNameItem.swift in Sources */,
 				26D10EE927025BCB00A16295 /* How_to_ScriptsApp.swift in Sources */,

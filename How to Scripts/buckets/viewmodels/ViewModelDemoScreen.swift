@@ -12,12 +12,10 @@ struct ViewModelDemoScreen: View {
 	
 	var body: some View {
 		
-//		List(viewModel.$spacecrafts)
-		
 		List(viewModel.spacecraftsList, id: \.id) { item in
 			
 			VStack(alignment: .leading) {
-				Text(item.id ?? "loading ..." )
+				Text(item.name ?? "loading ..." )
 					.font(.headline)
 			}
 			

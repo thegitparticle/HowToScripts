@@ -15,43 +15,21 @@ struct GetCallsResponse: Codable {
 }
 
 struct GetCallsData: Codable {
-	var id: String?
+	var id: Int?
+	var name: String?
 }
 
-//public class SpaceCraft: NSManagedObject {
-//	convenience init(
-//		context: NSManagedObjectContext,
-//		id: String = "loading ..."
-//	) {
-//		// CoreData stuff
-//		let entity = NSEntityDescription.entity(forEntityName: "SpaceCraft", in: context)!
-//		self.init(entity: entity, insertInto: context)
-//		// Object data
-//		self.id = id
-//	}
-//
-//	convenience init(
-//		context: NSManagedObjectContext
-//	) {
-//		self.init(
-//			context: context,
-//			id: "loading ..."
-//		)
-//	}
-//}
-//
-//
 extension SpaceCraft {
 	enum Request: RawRepresentable {
 		case all
-		case withid(id: String)
-
+		case withid(id: Int)
+		
 		typealias RawValue = NSFetchRequest<SpaceCraft>
-
+		
 		init?(rawValue: NSFetchRequest<SpaceCraft>) {
 			return nil
 		}
-
+		
 		var rawValue: NSFetchRequest<SpaceCraft> {
 			switch self {
 			case .all:
@@ -69,25 +47,25 @@ extension SpaceCraft {
 //
 
 extension SpaceCraft {
-//	@NSManaged public var id: String
-//
-//	/// Fetches all courses
-//	public class func fetchRequest() -> NSFetchRequest<SpaceCraft> {
-//		NSFetchRequest<SpaceCraft>(entityName: "SpaceCraft")
-//	}
-
+	//	@NSManaged public var id: String
+	//
+	//	/// Fetches all courses
+	//	public class func fetchRequest() -> NSFetchRequest<SpaceCraft> {
+	//		NSFetchRequest<SpaceCraft>(entityName: "SpaceCraft")
+	//	}
+	
 	/// Fetches courses with given UUID value
-	public class func fetchRequestWithId(id: String) -> NSFetchRequest<SpaceCraft> {
+	public class func fetchRequestWithId(id: Int) -> NSFetchRequest<SpaceCraft> {
 		let fetchSpaceCraft: NSFetchRequest<SpaceCraft> = self.fetchRequest()
 		fetchSpaceCraft.predicate = NSPredicate(format: "%K == %@", "id", id as CVarArg)
-
+		
 		return fetchSpaceCraft
 	}
-//
-//	/// Fetches courses with the given mark result
-//	public class func fetchPassedCourses(withMark mark: Int) -> NSFetchRequest<Course> {
-//		let fetchCourses: NSFetchRequest<Course> = self.fetchRequest()
-//		fetchCourses.predicate = NSPredicate(format: "mark == %i", mark)
-//		return fetchCourses
-//	}
+	//
+	//	/// Fetches courses with the given mark result
+	//	public class func fetchPassedCourses(withMark mark: Int) -> NSFetchRequest<Course> {
+	//		let fetchCourses: NSFetchRequest<Course> = self.fetchRequest()
+	//		fetchCourses.predicate = NSPredicate(format: "mark == %i", mark)
+	//		return fetchCourses
+	//	}
 }

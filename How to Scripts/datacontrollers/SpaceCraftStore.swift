@@ -37,13 +37,14 @@ class SpaceCraftStore: NSObject, ObservableObject {
 		}
 	}
 	
-	func add(id: String) {
+	func add(id: Int, name: String) {
 		let newSpaceCraft = SpaceCraft(context: PersistenceController.shared.container.viewContext)
 		newSpaceCraft.setValue(id, forKey: "id")
+		newSpaceCraft.setValue(name, forKey: "name")
 		saveContext()
 	}
 	
-	func delete(id: String) {
+	func delete(id: Int, name: String) {
 		let fetchSpaceCraft: NSFetchRequest<SpaceCraft> = SpaceCraft.fetchRequestWithId(id: id)
 		
 		do {
