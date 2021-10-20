@@ -10,6 +10,7 @@ import Kingfisher
 
 struct ImageCacheScreen: View {
 	var body: some View {
+		NavigationView {
 		ScrollView{
 			VStack() {
 				Text("images below").bold()
@@ -18,6 +19,7 @@ struct ImageCacheScreen: View {
 				KFAnimatedImage.url(URL(string: "https://aye-media-bucket.s3.us-west-2.amazonaws.com/default_chat_images/default_ok.gif")!)
 			}
 		}
+		}.transition(.opacity)
 	}
 }
 

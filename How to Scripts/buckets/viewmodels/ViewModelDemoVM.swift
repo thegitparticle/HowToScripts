@@ -16,9 +16,11 @@ class ViewModelDemoVM: ObservableObject {
 	private var cancellable: AnyCancellable?
 	
 	init(spacecraftPublisher: AnyPublisher<[SpaceCraft], Never> = SpaceCraftStore.shared.spacecrafts.eraseToAnyPublisher()) {
+		print("debugcoredata us`erdetailspublisher init workng before channcellable")
 		cancellable = spacecraftPublisher.sink { [unowned self] spacecrafts in
 			self.spacecraftsList = spacecrafts
 		}
+		print("debugcoredata userdetailspublisher init workng after channcellable")
 		getDetailsFromApi()
 	}
 	

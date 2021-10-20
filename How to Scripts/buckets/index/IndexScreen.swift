@@ -19,7 +19,7 @@ struct IndexScreen: View {
 					}
 				}
 			}
-		}
+		}.transition(.slide)
 	}
 }
 
